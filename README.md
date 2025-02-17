@@ -2,7 +2,7 @@
 
 Site de critiques de jeux vidéo permettant aux utilisateurs de noter et commenter des jeux.
 
-![Demo Page Screenshot](path_to_your_image/demo_screenshot.png)
+![Demo Page Screenshot](images/demo_screenshot.png)
 
 ## Description
 
