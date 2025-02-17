@@ -1,0 +1,619 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#index .article:hover{
+    box-shadow: 0 4px 8px 0  rgba(0,0,0,0.5);
+}
+
+
+
+span {
+    margin-top: 10px;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    background: red;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    gap: 50px;
+    width: 100%;
+    position: fixed;
+}
+.invisible-block {
+
+    height: 49px;
+}
+hr {
+    border: none;
+    height: 1px;
+    background-color: #787878;
+    width: 60%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 5px rgb(119, 119, 119);
+}
+
+nav {
+    display: flex;
+}
+
+.nav_logo {
+    height: 0;
+}
+
+nav img {
+    height: 40px;
+    padding: 5px 5px;
+}
+
+.nav_cell {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav_cell:hover{
+    background-color: rgb(235, 235, 235);
+}
+
+.nav_logo:hover .logo{
+    height: 44px;
+    padding: 3px 2.25px;
+}
+
+.active {
+    background-color: lightsalmon;
+}
+
+header form {
+    display: flex;
+}
+
+.search {
+    display: flex;
+}
+
+.search input {
+    padding: 6px 6px;
+    margin: 10px 8px;
+    margin-right: 0;
+    border: none;
+    background-color: rgb(244 244 244);
+}
+.search input:focus {
+    outline: none;
+}
+
+
+.search_button {
+    background-color: white;
+    float: right;
+    padding: 5px;
+    padding-bottom: 1px;
+    margin: 10px 0;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+}
+.search_button:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.searchbar_button {
+    background-color: rgb(84, 211, 95);
+    float: right;
+    width: 100%;
+    padding: 12px;
+    font-size: large;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.searchbar_button:hover {
+    background-color: rgb(65, 165, 98);
+}
+
+.search img {
+    height: 20px;
+}
+
+.a {
+    float: right;
+}
+
+.trigger_box {
+    display: none;
+}
+
+.trigger_label {
+    cursor: pointer;
+}
+
+.search_options {
+    visibility: hidden;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 5px;
+}
+
+#search_options_box:checked~.search_options {
+    visibility: visible;
+}
+
+#search_options_box:checked~.trigger_label {
+    background-color: rgb(235, 235, 235);
+}
+
+.dropdown {
+    display: block;
+    padding: 14px 16px;
+    cursor: pointer;
+}
+
+.dropdown img {
+    height: 10px;
+}
+
+.avatar_header {
+    display: none;
+}
+
+.dropdown:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.dropdown_options {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown_options a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown_options a:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.login:hover .dropdown_options {
+    display: block;
+}
+
+.search-check {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+input[type=checkbox] {
+height: 15px;
+width: 15px;
+}
+
+.trieDiv {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.trie{
+    display: flex;
+    justify-content: center;
+    width:200px;
+    padding:5px;
+}
+
+footer {
+    display: flex;
+    background-color: white;
+    text-align: center;
+    padding: 12px;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    bottom: 0;
+}
+
+section {
+    height: 20px;
+    height: 1000px;
+}
+
+.jaquette{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 20px 0px 20px 0px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+
+#connexion, #inscription, #edit_article, #edit_profil, #edit_avis {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main form:not(.bouton_supprimer){
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: block;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+main input[type=text], main input[type=password], main input[type=number], main input[type=date], main input[type=file], textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-bottom: 20px;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+main form .catégories, main form .supports {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+main form .supports {
+    margin-top: 40px;
+}
+
+main form:not(.bouton_supprimer) button {
+    width: 100%;
+    background-color: orangered;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+main form button:hover {
+    background-color: #ff3000;
+}
+
+.erreur {
+    padding: 20px;
+    border-radius: 2px;
+    background-color: #ffaaa4;
+    border: 2px solid #ff5e5e;
+    margin-top: 20px;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: black;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: #ff5e5e;
+}
+
+#article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#article .jeu {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+}
+
+#article .jeu img {
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 20px 0px 20px 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#article .description {
+    min-width: 400px;
+}
+
+.catégories, .supports {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.catégories p, .supports p {
+    display: block;
+    background-color: orangered;
+    border-radius: 20px;
+    padding: 5px 8px;
+    margin: 5px 0;
+    color: white;
+}
+
+.supports p {
+    background-color: #0070ff;
+    color: white;
+}
+
+.synopsis {
+    border-radius: 2px;
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+#article .notes {
+    display: flex;
+    width: 800px;
+    gap: 20px;
+    align-content: center;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#article .note_critique, #article .note_utilisateur {
+    display: block;
+    background-color: #e33e01;
+    font-size: 15px;
+    border-radius: 100px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 10px;
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#article .note_utilisateur {
+    background-color: #4646ef;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#article .illustrations {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#article .illustrations img {
+    height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#article .contenu {
+    width: 1000px;
+}
+
+#article form {
+    width: 800px;
+}
+
+.avis {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: block;
+    padding: 20px;
+    border-radius: 5px;
+    width: 800px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.avis_utilisateur {
+    display: flex;
+    justify-content: space-between;
+}
+
+.avis_utilisateur a {
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    gap: 6px;
+}
+
+.avis_utilisateur img {
+    height: 50px;
+}
+
+.avis_utilisateur h3 {
+    margin: 0;
+}
+
+.avis_entete {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.avis_entete .note_utilisateur {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.avis_contenu {
+    margin: 0;
+}
+
+.avis_options {
+    display: flex;
+    gap: 10px;
+}
+
+.modifierArticle{
+    background-color: rgb(83, 194, 79) !important;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+
+.avis_options button, .prive button {
+    background-color: orangered;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.prive {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: block;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.public {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    padding: 20px;
+    border-radius: 5px;
+    width: 1000px;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.public img {
+    height: 300px;
+}
+
+#index {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#index .article {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: block;
+    padding: 20px;
+    border-radius: 5px;
+    width: 1000px;
+    box-sizing: border-box;
+}
+
+#index .article a {
+    color: black;
+    text-decoration: none;
+}
+
+#index .jeu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#index .jeu img{
+    height: 300px;
+}
+
+#index .description {
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+#index .description h1, #index .description p {
+    margin: 0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.pagination button {
+    background-color: orangered;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
